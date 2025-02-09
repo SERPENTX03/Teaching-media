@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="th">
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>สื่อการสอนออนไลน์</title>
+
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      />
+      <style>
+        body {
+          font-family: sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+          color: #333;
+        }
+
+        header {
+          width: 100%; /* ทำให้ header เต็มความกว้างของหน้าจอ */
+        }
+        .banner {
+          width: 100%; /* ทำให้แบนเนอร์เต็มความกว้างของ header */
+          height: auto; /* ปรับความสูงตามอัตราส่วนของภาพ */
+        }
+        .banner img {
+          width: 100%; /* ทำให้รูปภาพในแบนเนอร์เต็มความกว้างของแบนเนอร์ */
+          height: auto; /* ปรับความสูงตามอัตราส่วนของภาพ */
+        }
+        .banner {
+          display: flex; /* ใช้ flexbox ในการจัดตำแหน่ง */
+          justify-content: center; /* จัดตำแหน่งแนวนอนตรงกลาง */
+          align-items: center; /* จัดตำแหน่งแนวตั้งตรงกลาง */
+        }
+
+        nav {
+          background-color: #333;
+          color: white;
+          padding: 0.5rem 0;
+        }
+
+        nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+        }
+
+        nav li {
+          display: inline;
+          margin: 0 1rem;
+        }
+
+        nav a {
+          color: white;
+          text-decoration: none;
+        }
+
+        main {
+          padding: 2rem;
+          margin: 2rem auto;
+          max-width: 800px;
+          background-color: white;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+          color: #072544;
+        }
+
+        .welcome-message {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .lesson-categories {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .lesson-categories a {
+          display: block;
+          text-decoration: none; /* เอาขีดเส้นใต้ในลิงก์ออก */
+          color: inherit; /* ใช้สีตัวอักษรตามค่าใน lesson-category */
+        }
+
+        .lesson-category {
+          margin: 1rem;
+          padding: 1rem;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          text-align: center;
+          transition: transform 0.2s;
+          position: relative; /* เพิ่ม property นี้ */
+          overflow: hidden; /* ป้องกัน lock icon ล้นออกมา */
+        }
+
+        .lesson-category:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .lesson-category a {
+          text-decoration: none;
+          color: #333;
+        }
+
+        .lesson-lock {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          /* สีดำโปร่งแสง */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 1.2rem;
+          cursor: default;
+        }
+        /* สไตล์สำหรับฟุตเตอร์ */
+        footer {
+          background-color: #eee;
+          padding: 15px;
+          border-radius: 10px;
+          margin-top: 40px;
+          font-size: 0.9em;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+          margin: 0 0 10px;
+        }
+
+        footer a {
+          color: #333;
+          text-decoration: none;
+          margin: 0 5px;
+          font-weight: bold;
+        }
+
+        footer a:hover {
+          text-decoration: underline;
+        }
+        body {
+          display: grid;
+          grid-template-rows: 1fr auto; /* แบ่งพื้นที่เป็น 2 ส่วน: 1 ส่วนสำหรับเนื้อหา, 1 ส่วนสำหรับ footer */
+          min-height: 100vh; /* ทำให้ body สูงเต็มจอภาพ */
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <div class="banner">
+          <img
+            src="\image\แบนเนอร์ ผืนผ้าใบ ทางทะเล วินเทจ สีเหลือง สีแดงและสีน้ำเงิน.png"
+            alt="คำอธิบายแบนเนอร์"
+          />
+        </div>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+      </nav>
+      <main>
+        <div
+          style="
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+          "
+        ></div>
+        <section class="lesson-categories">
+          <!-- ย้าย Tag a มาคลุม div -->
+          <a href="lesson1.html">
+            <div class="lesson-category" id="lesson1">
+              <h2>บทที่ 1</h2>
+              <p>เนื้อหาบทที่ 1</p>
+            </div>
+          </a>
+          <!-- ย้าย Tag a มาคลุม div -->
+
+          <a href="#">
+            <div class="lesson-category lesson-locked" id="lesson2">
+              <!-- เพิ่มไอคอนล็อก -->
+
+              <h2>บทที่ 2</h2>
+              <p>เนื้อหาบทที่ 2</p>
+              <div class="lesson-lock"><i class="fa-solid fa-lock"></i></div>
+            </div>
+          </a>
+          <!-- ย้าย Tag a มาคลุม div -->
+
+          <a href="#">
+            <div class="lesson-category lesson-locked" id="lesson3">
+              <h2>บทที่ 3</h2>
+              <p>เนื้อหาบทที่ 3</p>
+              <!-- เพิ่มไอคอนล็อก -->
+              <div class="lesson-lock">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+            </div>
+          </a>
+        </section>
+      </main>
+      <footer
+        style="
+          margin-top: 40px;
+          background-color: #333;
+          color: white;
+          padding: 20px;
+          border-radius: 5px;
+          text-align: center;
+        "
+      >
+        <p>&copy; 2025 สื่อการสอนออนไลน์ | ติดต่อ: 65209010028@htc.ac.th</p>
+        <div style="margin-top: 10px">
+          <a
+            href="https://www.facebook.com/phattarawan.877343/"
+            target="_blank"
+            style="color: white; margin: 0 10px"
+            >Facebook</a
+          >
+          |
+          <a
+            href="https://www.instagram.com/chaxmqz._/"
+            target="_blank"
+            style="color: white; margin: 0 10px"
+            >Instagram</a
+          >
+        </div>
+      </footer>
+      <script>
+        // ตรวจสอบว่าผู้ใช้เรียนบทที่ 1 แล้วหรือยัง (ในที่นี้ใช้ localStorage)
+        const lesson1Completed = localStorage.getItem("lesson1Completed");
+
+        if (lesson1Completed) {
+          // ถ้าเรียนแล้ว เอา class lesson-locked ออกจากบทที่ 2
+          document.getElementById("lesson2").classList.remove("lesson-locked");
+        }
+
+        // (คล้ายกันสำหรับบทที่ 3)
+        const lesson2Completed = localStorage.getItem("lesson2Completed");
+        if (lesson2Completed) {
+          document.getElementById("lesson3").classList.remove("lesson-locked");
+        }
+
+        // เมื่อผู้ใช้เรียนจบบทที่ 1:
+        // สมมติว่ามีปุ่มหรือเหตุการณ์ที่ผู้ใช้คลิกเมื่อเรียนจบ
+        // document.getElementById('finishLesson1Button').addEventListener('click', () => {
+        //     localStorage.setItem('lesson1Completed', 'true');
+        //     document.getElementById('lesson2').classList.remove('lesson-locked');
+        // });
+
+        // (ทำนองเดียวกันสำหรับบทอื่นๆ)
+      </script>
+    </body>
+  </html>
+</html>

@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+
+.banner {
+    width: 100%; /* ทำให้แบนเนอร์เต็มความกว้างของ header */
+    height: auto; /* ปรับความสูงตามอัตราส่วนของภาพ */
+    }
+.banner img {
+width: 100%; /* ทำให้รูปภาพในแบนเนอร์เต็มความกว้างของแบนเนอร์ */
+height: auto; /* ปรับความสูงตามอัตราส่วนของภาพ */
+
+
+}
+.banner {
+display: flex; /* ใช้ flexbox ในการจัดตำแหน่ง */
+justify-content: center; /* จัดตำแหน่งแนวนอนตรงกลาง */
+align-items: center; /* จัดตำแหน่งแนวตั้งตรงกลาง */
+}
+
+
+
+
+.logo {
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+nav {
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* จัดกึ่งกลางแนวนอน */
+    align-items: center; /* จัดกึ่งกลางแนวตั้ง */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* ใช้ flexbox กับ ul */
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #0078D7;
+}
+
+main {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0078D7;
+}
+
+.contact-form, .contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #1e7e34;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #0078D7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #0056b3;
+}
